@@ -77,8 +77,8 @@
 		173AC8DD1A6EA6CA00B091F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		179EED181A6D1F15008263BA /* CloudBuilder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CloudBuilder.xcodeproj; path = ../../CloudBuilder/CloudBuilderiOS/CloudBuilder.xcodeproj; sourceTree = "<group>"; };
 		179EED201A6D207F008263BA /* ClanUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClanUtils.h; sourceTree = "<group>"; };
-		179EED211A6D20BE008263BA /* libiOSCurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOSCurl.a; path = ../../delivery/curl/iOS/Debug/libiOSCurl.a; sourceTree = "<group>"; };
-		179EED231A6D20DC008263BA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../delivery/Facebook/iOS/FacebookSDK.framework; sourceTree = "<group>"; };
+		179EED211A6D20BE008263BA /* libiOSCurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOSCurl.a; path = ../../../cloudbuilder/delivery/curl/iOS/Debug/libiOSCurl.a; sourceTree = "<group>"; };
+		179EED231A6D20DC008263BA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../cloudbuilder/delivery/Facebook/iOS/FacebookSDK.framework; sourceTree = "<group>"; };
 		179EED251A6D215E008263BA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		179EED271A6D2166008263BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		179EED291A6D219B008263BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -99,10 +99,10 @@
 		179EED3E1A6D221C008263BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		179EED3F1A6D221C008263BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		179EED401A6D221C008263BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		179EED521A6D22CD008263BA /* libCloudBuilder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCloudBuilder.a; path = ../../delivery/CloudBuilder/iOS/Debug/libCloudBuilder.a; sourceTree = "<group>"; };
-		179EED551A6D3192008263BA /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = ../../delivery/Google/iOS/GooglePlus/GoogleOpenSource.framework; sourceTree = "<group>"; };
-		179EED561A6D3192008263BA /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = ../../delivery/Google/iOS/GooglePlus/GooglePlus.bundle; sourceTree = "<group>"; };
-		179EED571A6D3192008263BA /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = ../../delivery/Google/iOS/GooglePlus/GooglePlus.framework; sourceTree = "<group>"; };
+		179EED521A6D22CD008263BA /* libCloudBuilder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCloudBuilder.a; path = ../../../cloudbuilder/delivery/CloudBuilder/iOS/Debug/libCloudBuilder.a; sourceTree = "<group>"; };
+		179EED551A6D3192008263BA /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = ../../../cloudbuilder/delivery/Google/iOS/GooglePlus/GoogleOpenSource.framework; sourceTree = "<group>"; };
+		179EED561A6D3192008263BA /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = ../../../cloudbuilder/delivery/Google/iOS/GooglePlus/GooglePlus.bundle; sourceTree = "<group>"; };
+		179EED571A6D3192008263BA /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = ../../../cloudbuilder/delivery/Google/iOS/GooglePlus/GooglePlus.framework; sourceTree = "<group>"; };
 		17B58A3B1A6D36D000AB48B3 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -513,7 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../delivery/CloudBuilder/iOS/$(CONFIGURATION)\"",
+					"\"$(SRCROOT)/../../../cloudbuilder/delivery/CloudBuilder/iOS/$(CONFIGURATION)\"",
 				);
 				OTHER_LDFLAGS = "-lCloudBuilder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../delivery/CloudBuilder/iOS/$(CONFIGURATION)\"",
+					"\"$(SRCROOT)/../../../cloudbuilder/delivery/CloudBuilder/iOS/$(CONFIGURATION)\"",
 				);
 				OTHER_LDFLAGS = "-lCloudBuilder";
 				PRODUCT_NAME = "$(TARGET_NAME)";

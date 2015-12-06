@@ -287,7 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nmkdir -p \"$PROJECT_DIR\"/../../../delivery/curl/iOS/$CONFIGURATION\n\nlipo -create \"$BUILD_DIR\"/$CONFIGURATION-iphoneos/libiOSCurl.a  \"$BUILD_DIR\"/$CONFIGURATION-iphonesimulator/libiOSCurl.a -output \"$PROJECT_DIR\"/../../../delivery/curl/iOS/$CONFIGURATION/libiOSCurl.a\n\n";
+			shellScript = "\nmkdir -p \"$PROJECT_DIR\"/../../../../cloudbuilder/delivery/curl/iOS/$CONFIGURATION\n\nlipo -create \"$BUILD_DIR\"/$CONFIGURATION-iphoneos/libiOSCurl.a  \"$BUILD_DIR\"/$CONFIGURATION-iphonesimulator/libiOSCurl.a -output \"$PROJECT_DIR\"/../../../../cloudbuilder/delivery/curl/iOS/$CONFIGURATION/libiOSCurl.a\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -375,7 +375,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"../../**",
-					"../../../delivery/openssl/iOS/include/**",
+					"../../../../cloudbuilder/delivery/openssl/iOS/include/**",
 					"../../include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
@@ -430,7 +430,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"../../**",
-					"../../../delivery/openssl/iOS/include/**",
+					"../../../../cloudbuilder/delivery/openssl/iOS/include/**",
 					"../../include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;

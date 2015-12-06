@@ -4,6 +4,6 @@ ndk-build
 
 for cpu in $architectures; do
 	echo "Installing binary for $cpu to delivery"
-	mkdir ../../../delivery/curl/Android/$cpu
-	cp ../obj/local/$cpu/libcurl.a ../../../delivery/curl/Android/$cpu
+	mkdir ../../../../cloudbuilder/delivery/curl/Android/$cpu
+	cp ../obj/local/$cpu/libcurl.a ../../../../cloudbuilder/delivery/curl/Android/$cpu
 done

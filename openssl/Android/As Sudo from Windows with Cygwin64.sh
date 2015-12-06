@@ -17,8 +17,8 @@ else
 	cd openssl-1.0.1i
 fi
 make build_libs
-mkdir -p ../../delivery/openssl/Android/include
-mkdir -p ../../delivery/openssl/Android/lib
-cp -rL include ../../delivery/openssl/Android
-cp libcrypto.a ../../delivery/openssl/Android/lib
-cp libssl.a ../../delivery/openssl/Android/lib
+mkdir -p ../../../cloudbuilder/delivery/openssl/Android/include
+mkdir -p ../../../cloudbuilder/delivery/openssl/Android/lib
+cp -rL include ../../../cloudbuilder/delivery/openssl/Android
+cp libcrypto.a ../../../cloudbuilder/delivery/openssl/Android/lib
+cp libssl.a ../../../cloudbuilder/delivery/openssl/Android/lib

@@ -46,7 +46,7 @@ BASE_DIR=`pwd`
 BUILD_DIR="$BASE_DIR/build"
 DIST_DIR="$BASE_DIR/dist"
 FILES_DIR="$BASE_DIR/.."
-DELIVERY_DIR="$BASE_DIR/../../delivery/openssl/"
+DELIVERY_DIR="$BASE_DIR/../../../cloudbuilder/delivery/openssl/"
 
 OPENSSL_NAME="openssl-$VERSION"
 OPENSSL_FILE="$OPENSSL_NAME.tar.gz"

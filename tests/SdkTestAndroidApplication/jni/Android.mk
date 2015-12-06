@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-CLOUDBUILDER_PATH	= ../../delivery/CloudBuilder
+CLOUDBUILDER_PATH	= ../../../cloudbuilder/delivery/CloudBuilder
 SOURCES_PATH		= ./
 
 include $(CLEAR_VARS)

@@ -184,7 +184,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../delivery/CloudBuilder/MacOSX/$(CONFIGURATION)\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../cloudbuilder/delivery/CloudBuilder/MacOSX/$(CONFIGURATION)\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -221,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../delivery/CloudBuilder/MacOSX/$(CONFIGURATION)\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../cloudbuilder/delivery/CloudBuilder/MacOSX/$(CONFIGURATION)\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-lCloudBuilder64Console";
@@ -241,7 +241,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/florian/Documents/CotC/sources/delivery/CloudBuilder/MacOSX/Debug,
+					../../../cloudbuilder/delivery/CloudBuilder/MacOSX/Debug,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -259,7 +259,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/florian/Documents/CotC/sources/delivery/CloudBuilder/MacOSX/Debug,
+					../../../cloudbuilder/delivery/CloudBuilder/MacOSX/Debug,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

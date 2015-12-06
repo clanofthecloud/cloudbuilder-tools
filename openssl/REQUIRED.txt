@@ -1,0 +1,3 @@
+Place in this directory:
+openssl-1.0.1i.tar.gz
+from https://www.openssl.org/source/

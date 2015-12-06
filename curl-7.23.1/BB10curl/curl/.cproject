@@ -18,7 +18,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="a" artifactName="${ProjName}Custom" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="" id="com.qnx.qcc.configuration.staticLib.debug.138423188" name="Device-Debug" parent="com.qnx.qcc.configuration.staticLib.debug" postbuildStep="mkdir -p ../../../../delivery/curl/BB10/Debug; cp libcurlCustom.a ../../../../delivery/curl/BB10/Debug">
+				<configuration artifactExtension="a" artifactName="${ProjName}Custom" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="" id="com.qnx.qcc.configuration.staticLib.debug.138423188" name="Device-Debug" parent="com.qnx.qcc.configuration.staticLib.debug" postbuildStep="mkdir -p ../../../../../cloudbuilder/delivery/curl/BB10/Debug; cp libcurlCustom.a ../../../../../cloudbuilder/delivery/curl/BB10/Debug">
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.debug.138423188." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.debug.731852327" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.2133813660" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
@@ -113,7 +113,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="" id="com.qnx.qcc.configuration.staticLib.release.1844606945" name="Device-Release" parent="com.qnx.qcc.configuration.staticLib.release" postbuildStep="mkdir -p ../../../../delivery/curl/BB10/Release; cp libcurl.a ../../../../delivery/curl/BB10/Release">
+				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib" description="" id="com.qnx.qcc.configuration.staticLib.release.1844606945" name="Device-Release" parent="com.qnx.qcc.configuration.staticLib.release" postbuildStep="mkdir -p ../../../../../cloudbuilder/delivery/curl/BB10/Release; cp libcurl.a ../../../../../cloudbuilder/delivery/curl/BB10/Release">
 					<folderInfo id="com.qnx.qcc.configuration.staticLib.release.1844606945." name="/" resourcePath="">
 						<toolChain id="com.qnx.qcc.toolChain.staticLib.release.36888192" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.997628590" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>

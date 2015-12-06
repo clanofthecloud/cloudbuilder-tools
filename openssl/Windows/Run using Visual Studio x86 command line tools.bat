@@ -26,9 +26,9 @@ call ms\do_ms
 
 :skipConfigure
 nmake -f ms\nt.mak tmp32 out32 inc32\openssl headers lib
-mkdir -p ..\..\delivery\openssl\Win32\x86\include
-mkdir -p ..\..\delivery\openssl\Win32\x86\lib
-xcopy /D /E /C /R /I /K /Y inc32 ..\..\delivery\openssl\Win32\x86\include
-copy out32\*.lib ..\..\delivery\openssl\Win32\x86\lib
-copy tmp32\*.pdb ..\..\delivery\openssl\Win32\x86\lib
+mkdir -p ..\..\..\cloudbuilder\delivery\openssl\Win32\x86\include
+mkdir -p ..\..\..\cloudbuilder\delivery\openssl\Win32\x86\lib
+xcopy /D /E /C /R /I /K /Y inc32 ..\..\..\cloudbuilder\delivery\openssl\Win32\x86\include
+copy out32\*.lib ..\..\..\cloudbuilder\delivery\openssl\Win32\x86\lib
+copy tmp32\*.pdb ..\..\..\cloudbuilder\delivery\openssl\Win32\x86\lib
 cd %here%

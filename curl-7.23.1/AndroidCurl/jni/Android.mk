@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 
 CURL_SRC_DIR	:= ../../lib
-DELIVERY_PATH	:= $(LOCAL_PATH)/../../../delivery
+DELIVERY_PATH	:= $(LOCAL_PATH)/../../../../cloudbuilder/delivery
 
 include $(CLEAR_VARS)
 

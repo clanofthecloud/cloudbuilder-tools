@@ -288,12 +288,12 @@
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release DLL|x64'">
@@ -337,12 +337,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|Win32'">
@@ -387,12 +387,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|x64'">
@@ -436,12 +436,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">
@@ -486,12 +486,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">
@@ -535,12 +535,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|Win32'">
@@ -587,12 +587,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">
@@ -637,12 +637,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">
@@ -689,12 +689,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">
@@ -739,12 +739,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|Win32'">
@@ -791,12 +791,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">
@@ -841,12 +841,12 @@ copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(Plat
       <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\delivery\pthread
-mkdir ..\..\delivery\pthread\Windows
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)
-mkdir ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\libpthread*.lib ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+      <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
