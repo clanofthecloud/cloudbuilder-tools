@@ -228,7 +228,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_SSLEAY;USE_OPENSSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\$(Configuration)\vc6libcurl.pch</PrecompiledHeaderOutputFile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -248,10 +248,14 @@
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2010|x64'">
@@ -297,7 +301,7 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_SSLEAY;USE_OPENSSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\$(Configuration)\vc6libcurl.pch</PrecompiledHeaderOutputFile>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -317,10 +321,14 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|x64'">
@@ -366,7 +374,7 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_SSLEAY;USE_OPENSSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\$(Configuration)\vc6libcurl.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -384,10 +392,14 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|x64'">
@@ -432,7 +444,7 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_SSLEAY;USE_OPENSSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\$(Configuration)\vc6libcurl.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
@@ -451,10 +463,14 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|x64'">
@@ -499,7 +515,7 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;BUILDING_LIBCURL;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_CYASSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\DLL-Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\DLL-Debug\vc6libcurl.pch</PrecompiledHeaderOutputFile>
@@ -534,10 +550,14 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|x64'">
@@ -597,7 +617,7 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\..\cloudbuilder\delivery\openssl\Win32\$(PlatformShortName)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;BUILDING_LIBCURL;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\DLL-Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\DLL-Release\vc6libcurl.pch</PrecompiledHeaderOutputFile>
@@ -629,10 +649,14 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configur
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|x64'">

@@ -339,8 +339,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
@@ -438,8 +440,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
@@ -537,8 +541,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
@@ -639,8 +645,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
@@ -741,8 +749,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
@@ -843,8 +853,10 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\pthread
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy *.h ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
     </PostBuildEvent>
