@@ -1,0 +1,7 @@
+build
+dist
+files
+*.tar.gz
+*.log
+
+

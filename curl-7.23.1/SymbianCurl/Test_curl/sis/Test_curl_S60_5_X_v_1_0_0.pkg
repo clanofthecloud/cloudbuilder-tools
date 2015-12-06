@@ -1,0 +1,38 @@
+; Installation file for Test_curl application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Test_curl"},(0xe3cfcb9d),1,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 5.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"$(EPOCROOT)epoc32\release\$(PLATFORM)\$(TARGET)\Test_curl_0xe3cfcb9d.exe"		-"!:\sys\bin\Test_curl_0xe3cfcb9d.exe"
+;"$(EPOCROOT)epoc32\release\$(PLATFORM)\$(TARGET)\curl.dll"		-"!:\sys\bin\curl.dll"
+"$(EPOCROOT)epoc32\data\z\resource\apps\test_curl_0xe3cfcb9d.rsc"		-"!:\resource\apps\Test_curl_0xe3cfcb9d.rsc"
+"$(EPOCROOT)epoc32\data\z\private\10003a3f\apps\test_curl_0xe3cfcb9d_reg.rsc"	-"!:\private\10003a3f\import\apps\Test_curl_0xe3cfcb9d_reg.rsc"
+"$(EPOCROOT)epoc32\data\z\resource\apps\test_curl_0xe3cfcb9d.mif" -"!:\resource\apps\Test_curl_0xe3cfcb9d.mif"
+;"..\help\test_curl_0xe3cfcb9d.hlp"							 -"!:\resource\help\Test_curl_0xe3cfcb9d.hlp"
+
+; Add any installation notes if applicable
+;"Test_curl.txt"		-"!:\private\e3cfcb9d\Test_curl.txt"
+
+;required for application to be covered by backup/restore facility 
+"..\sis\backup_registration.xml"		-"!:\private\e3cfcb9d\backup_registration.xml"

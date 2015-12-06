@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iOSCurl' target in the 'iOSCurl' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		178C8D5B1A305812000C961D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D531A305812000C961D /* Game.cpp */; };
+		178C8D5C1A305812000C961D /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D551A305812000C961D /* Input.cpp */; };
+		178C8D5D1A305812000C961D /* Lobby.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D571A305812000C961D /* Lobby.cpp */; };
+		178C8D5E1A305812000C961D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 178C8D591A305812000C961D /* main.cpp */; };
+		178C8D881A305D11000C961D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D861A305D11000C961D /* libcrypto.a */; };
+		178C8D891A305D11000C961D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D871A305D11000C961D /* libssl.a */; };
+		178C8D8E1A305DC0000C961D /* libMacosXCurl64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D8C1A305DA7000C961D /* libMacosXCurl64.a */; };
+		178C8D8F1A305DCA000C961D /* libCloudBuilderMacOSX64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D6B1A3059EA000C961D /* libCloudBuilderMacOSX64.a */; };
+		178C8D921A305F01000C961D /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D911A305F01000C961D /* libobjc.dylib */; };
+		178C8D941A305F14000C961D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D931A305F14000C961D /* Foundation.framework */; };
+		178C8D971A305F33000C961D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D961A305F33000C961D /* GameKit.framework */; };
+		178C8D9B1A305F71000C961D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D9A1A305F71000C961D /* AppKit.framework */; };
+		178C8DA31A306052000C961D /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C8D9D1A305FC5000C961D /* libstdc++.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		178C8D681A3059EA000C961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 378EE716155A347000EA80C2;
+			remoteInfo = CloudBuilderMacOSX;
+		};
+		178C8D6A1A3059EA000C961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 378268E616EA5C8900DD86C0;
+			remoteInfo = CloudBuilderMacOSX64;
+		};
+		178C8D6C1A3059EA000C961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A3B500619C16C0F006CB4F8;
+			remoteInfo = CloudBuilderMacOSX64Console;
+		};
+		178C8D6E1A3059EA000C961D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C29A044218AE3BC800D26C27;
+			remoteInfo = CloudBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		178C8D461A3057F2000C961D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		178C8D481A3057F2000C961D /* MatchTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MatchTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		178C8D521A305812000C961D /* ClanUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClanUtils.h; sourceTree = "<group>"; };
+		178C8D531A305812000C961D /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		178C8D541A305812000C961D /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		178C8D551A305812000C961D /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
+		178C8D561A305812000C961D /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		178C8D571A305812000C961D /* Lobby.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lobby.cpp; sourceTree = "<group>"; };
+		178C8D581A305812000C961D /* Lobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lobby.h; sourceTree = "<group>"; };
+		178C8D591A305812000C961D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		178C8D5A1A305812000C961D /* Tokenizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tokenizer.hpp; sourceTree = "<group>"; };
+		178C8D5F1A3059A1000C961D /* libCloudBuilder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCloudBuilder.a; path = ../../delivery/CloudBuilder/MacOSX/Debug/libCloudBuilder.a; sourceTree = "<group>"; };
+		178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CloudBuilderMacOSX.xcodeproj; path = ../../CloudBuilder/CloudBuilderMacOSX/CloudBuilderMacOSX.xcodeproj; sourceTree = "<group>"; };
+		178C8D861A305D11000C961D /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../delivery/openssl/MacOSX/lib/libcrypto.a; sourceTree = "<group>"; };
+		178C8D871A305D11000C961D /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../delivery/openssl/MacOSX/lib/libssl.a; sourceTree = "<group>"; };
+		178C8D8A1A305D3E000C961D /* libMacosXCurl64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMacosXCurl64.a; path = ../../delivery/curl/MacOSX/Release/libMacosXCurl64.a; sourceTree = "<group>"; };
+		178C8D8C1A305DA7000C961D /* libMacosXCurl64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMacosXCurl64.a; path = ../../delivery/curl/MacOSX/Debug/libMacosXCurl64.a; sourceTree = "<group>"; };
+		178C8D911A305F01000C961D /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
+		178C8D931A305F14000C961D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		178C8D961A305F33000C961D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		178C8D981A305F69000C961D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		178C8D9A1A305F71000C961D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		178C8D9D1A305FC5000C961D /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		178C8D451A3057F2000C961D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178C8D9B1A305F71000C961D /* AppKit.framework in Frameworks */,
+				178C8D971A305F33000C961D /* GameKit.framework in Frameworks */,
+				178C8D941A305F14000C961D /* Foundation.framework in Frameworks */,
+				178C8D921A305F01000C961D /* libobjc.dylib in Frameworks */,
+				178C8D8F1A305DCA000C961D /* libCloudBuilderMacOSX64.a in Frameworks */,
+				178C8D881A305D11000C961D /* libcrypto.a in Frameworks */,
+				178C8D8E1A305DC0000C961D /* libMacosXCurl64.a in Frameworks */,
+				178C8D891A305D11000C961D /* libssl.a in Frameworks */,
+				178C8DA31A306052000C961D /* libstdc++.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		178C8D3F1A3057F2000C961D = {
+			isa = PBXGroup;
+			children = (
+				178C8D9A1A305F71000C961D /* AppKit.framework */,
+				178C8D981A305F69000C961D /* CoreFoundation.framework */,
+				178C8D961A305F33000C961D /* GameKit.framework */,
+				178C8D931A305F14000C961D /* Foundation.framework */,
+				178C8D911A305F01000C961D /* libobjc.dylib */,
+				178C8D9D1A305FC5000C961D /* libstdc++.dylib */,
+				178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */,
+				178C8D8C1A305DA7000C961D /* libMacosXCurl64.a */,
+				178C8D861A305D11000C961D /* libcrypto.a */,
+				178C8D871A305D11000C961D /* libssl.a */,
+				178C8D5F1A3059A1000C961D /* libCloudBuilder.a */,
+				178C8D8A1A305D3E000C961D /* libMacosXCurl64.a */,
+				178C8D4A1A3057F2000C961D /* MatchTest */,
+				178C8D491A3057F2000C961D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		178C8D491A3057F2000C961D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				178C8D481A3057F2000C961D /* MatchTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		178C8D4A1A3057F2000C961D /* MatchTest */ = {
+			isa = PBXGroup;
+			children = (
+				178C8D521A305812000C961D /* ClanUtils.h */,
+				178C8D531A305812000C961D /* Game.cpp */,
+				178C8D541A305812000C961D /* Game.h */,
+				178C8D551A305812000C961D /* Input.cpp */,
+				178C8D561A305812000C961D /* Input.h */,
+				178C8D571A305812000C961D /* Lobby.cpp */,
+				178C8D581A305812000C961D /* Lobby.h */,
+				178C8D591A305812000C961D /* main.cpp */,
+				178C8D5A1A305812000C961D /* Tokenizer.hpp */,
+			);
+			path = MatchTest;
+			sourceTree = "<group>";
+		};
+		178C8D621A3059EA000C961D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				178C8D691A3059EA000C961D /* libCloudBuilderMacOSX.a */,
+				178C8D6B1A3059EA000C961D /* libCloudBuilderMacOSX64.a */,
+				178C8D6D1A3059EA000C961D /* libCloudBuilderMacOSX64Console.a */,
+				178C8D6F1A3059EA000C961D /* CloudBuilder.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		178C8D471A3057F2000C961D /* MatchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 178C8D4F1A3057F2000C961D /* Build configuration list for PBXNativeTarget "MatchTest" */;
+			buildPhases = (
+				178C8D441A3057F2000C961D /* Sources */,
+				178C8D451A3057F2000C961D /* Frameworks */,
+				178C8D461A3057F2000C961D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatchTest;
+			productName = MatchTest;
+			productReference = 178C8D481A3057F2000C961D /* MatchTest */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		178C8D401A3057F2000C961D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = CotC;
+				TargetAttributes = {
+					178C8D471A3057F2000C961D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 178C8D431A3057F2000C961D /* Build configuration list for PBXProject "MatchTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 178C8D3F1A3057F2000C961D;
+			productRefGroup = 178C8D491A3057F2000C961D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 178C8D621A3059EA000C961D /* Products */;
+					ProjectRef = 178C8D611A3059EA000C961D /* CloudBuilderMacOSX.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				178C8D471A3057F2000C961D /* MatchTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		178C8D691A3059EA000C961D /* libCloudBuilderMacOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCloudBuilderMacOSX.a;
+			remoteRef = 178C8D681A3059EA000C961D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		178C8D6B1A3059EA000C961D /* libCloudBuilderMacOSX64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCloudBuilderMacOSX64.a;
+			remoteRef = 178C8D6A1A3059EA000C961D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		178C8D6D1A3059EA000C961D /* libCloudBuilderMacOSX64Console.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCloudBuilderMacOSX64Console.a;
+			remoteRef = 178C8D6C1A3059EA000C961D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		178C8D6F1A3059EA000C961D /* CloudBuilder.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CloudBuilder.bundle;
+			remoteRef = 178C8D6E1A3059EA000C961D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		178C8D441A3057F2000C961D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178C8D5C1A305812000C961D /* Input.cpp in Sources */,
+				178C8D5B1A305812000C961D /* Game.cpp in Sources */,
+				178C8D5E1A305812000C961D /* main.cpp in Sources */,
+				178C8D5D1A305812000C961D /* Lobby.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		178C8D4D1A3057F2000C961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		178C8D4E1A3057F2000C961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		178C8D501A3057F2000C961D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../CloudBuilder/Headers,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/florian/Documents/CotC/sources/delivery/CloudBuilder/MacOSX/Debug,
+					/Users/florian/Documents/CotC/sources/delivery/openssl/MacOSX/lib,
+					/Users/florian/Documents/CotC/sources/delivery/curl/MacOSX/Release,
+					/Users/florian/Documents/CotC/sources/delivery/curl/MacOSX/Debug,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		178C8D511A3057F2000C961D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../CloudBuilder/Headers,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/florian/Documents/CotC/sources/delivery/CloudBuilder/MacOSX/Debug,
+					/Users/florian/Documents/CotC/sources/delivery/openssl/MacOSX/lib,
+					/Users/florian/Documents/CotC/sources/delivery/curl/MacOSX/Release,
+					/Users/florian/Documents/CotC/sources/delivery/curl/MacOSX/Debug,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		178C8D431A3057F2000C961D /* Build configuration list for PBXProject "MatchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178C8D4D1A3057F2000C961D /* Debug */,
+				178C8D4E1A3057F2000C961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		178C8D4F1A3057F2000C961D /* Build configuration list for PBXNativeTarget "MatchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178C8D501A3057F2000C961D /* Debug */,
+				178C8D511A3057F2000C961D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 178C8D401A3057F2000C961D /* Project object */;
+}

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{df72e2ff-6825-43c4-85da-6344a15e6f30}</ProjectGuid>
+    <RootNamespace>WP8curl</RootNamespace>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;__WP8__;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_CYASSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\cyassl-2.0.6;..\..\cyassl-2.0.6\cyassl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)curl$(TargetExt)</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\curl
+mkdir ..\..\delivery\curl\WP8
+mkdir ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\curl.lib ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;__WP8__;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_CYASSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\cyassl-2.0.6;..\..\cyassl-2.0.6\cyassl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)curl$(TargetExt)</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\curl
+mkdir ..\..\delivery\curl\WP8
+mkdir ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)
+copy $(Configuration)\$(ProjectName)\curl.lib ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;__WP8__;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_CYASSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\cyassl-2.0.6;..\..\cyassl-2.0.6\cyassl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)curl$(TargetExt)</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\curl
+mkdir ..\..\delivery\curl\WP8
+mkdir ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\curl.lib ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;__WP8__;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;HTTP_ONLY;CURL_DISABLE_RTSP;CURL_DISABLE_GOPHER;CURL_DISABLE_POP3;CURL_DISABLE_DICT;CURL_DISABLE_FILE;CURL_DISABLE_FTP;CURL_DISABLE_IMAP;CURL_DISABLE_LDAP;CURL_DISABLE_SMTP;CURL_DISABLE_TELNET;CURL_DISABLE_TFTP;USE_CYASSL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>.;..\include;..\..\cyassl-2.0.6;..\..\cyassl-2.0.6\cyassl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)curl$(TargetExt)</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\delivery\curl
+mkdir ..\..\delivery\curl\WP8
+mkdir ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)
+copy $(PlatformName)\$(Configuration)\$(ProjectName)\curl.lib ..\..\delivery\curl\WP8\$(PlatformName)\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\asyn-thread.c" />
+    <ClCompile Include="..\lib\base64.c" />
+    <ClCompile Include="..\lib\connect.c" />
+    <ClCompile Include="..\lib\cookie.c" />
+    <ClCompile Include="..\lib\curl_addrinfo.c" />
+    <ClCompile Include="..\lib\curl_memrchr.c" />
+    <ClCompile Include="..\lib\curl_rand.c" />
+    <ClCompile Include="..\lib\curl_threads.c" />
+    <ClCompile Include="..\lib\cyassl.c" />
+    <ClCompile Include="..\lib\easy.c" />
+    <ClCompile Include="..\lib\escape.c" />
+    <ClCompile Include="..\lib\fileinfo.c" />
+    <ClCompile Include="..\lib\formdata.c" />
+    <ClCompile Include="..\lib\getenv.c" />
+    <ClCompile Include="..\lib\getinfo.c" />
+    <ClCompile Include="..\lib\hash.c" />
+    <ClCompile Include="..\lib\hostasyn.c" />
+    <ClCompile Include="..\lib\hostip.c" />
+    <ClCompile Include="..\lib\hostip4.c" />
+    <ClCompile Include="..\lib\http.c" />
+    <ClCompile Include="..\lib\http_chunks.c" />
+    <ClCompile Include="..\lib\http_digest.c" />
+    <ClCompile Include="..\lib\http_proxy.c" />
+    <ClCompile Include="..\lib\if2ip.c" />
+    <ClCompile Include="..\lib\inet_ntop.c" />
+    <ClCompile Include="..\lib\inet_pton.c" />
+    <ClCompile Include="..\lib\llist.c" />
+    <ClCompile Include="..\lib\md5.c" />
+    <ClCompile Include="..\lib\mprintf.c" />
+    <ClCompile Include="..\lib\multi.c" />
+    <ClCompile Include="..\lib\netrc.c" />
+    <ClCompile Include="..\lib\nonblock.c" />
+    <ClCompile Include="..\lib\parsedate.c" />
+    <ClCompile Include="..\lib\progress.c" />
+    <ClCompile Include="..\lib\rawstr.c" />
+    <ClCompile Include="..\lib\select.c" />
+    <ClCompile Include="..\lib\sendf.c" />
+    <ClCompile Include="..\lib\share.c" />
+    <ClCompile Include="..\lib\slist.c" />
+    <ClCompile Include="..\lib\socks.c" />
+    <ClCompile Include="..\lib\speedcheck.c" />
+    <ClCompile Include="..\lib\splay.c" />
+    <ClCompile Include="..\lib\sslgen.c" />
+    <ClCompile Include="..\lib\ssluse.c" />
+    <ClCompile Include="..\lib\strequal.c" />
+    <ClCompile Include="..\lib\strerror.c" />
+    <ClCompile Include="..\lib\strtok.c" />
+    <ClCompile Include="..\lib\timeval.c" />
+    <ClCompile Include="..\lib\transfer.c" />
+    <ClCompile Include="..\lib\url.c" />
+    <ClCompile Include="..\lib\warnless.c" />
+    <ClCompile Include="..\lib\wildcard.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

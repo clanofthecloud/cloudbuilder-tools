@@ -1,0 +1,27 @@
+/*
+============================================================================
+ Name		: Test_curl.rss
+ Author	  : 
+ Copyright   : Your copyright notice
+ Description : This file contains the application registration resource.
+============================================================================
+*/
+
+#include "Test_curl.hrh"
+#include "Test_curl.rls"
+#include <appinfo.rh>
+#include <test_curl_0xe3cfcb9d.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 _UID3
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file="Test_curl_0xe3cfcb9d";
+	localisable_resource_file =  qtn_loc_resource_file_1;
+	localisable_resource_id = R_LOCALISABLE_APP_INFO;
+
+	embeddability=KAppNotEmbeddable;
+	newfile=KAppDoesNotSupportNewFile;
+	}
+

@@ -1,0 +1,15 @@
+To compile openssl on Android, we use scripts from here:
+https://github.com/alexbbb/pjsip-android-builder#build-only-openssl
+
+openssl does not currently support 64 bits compilation on Android, while this nice little script works perfectly.
+It's dead simple to use:
+
+./openssl-build <ANDROID_NDK_PATH> <OPENSSL_SOURCES_PATH> <ANDROID_TARGET_API> <ANDROID_TARGET_ABI> <GCC_VERSION> <OUTPUT_PATH>
+It seems it does not compile when using relative paths for OUTPUT_PATH , so make sure to use absolute paths everywhere!
+
+With our current setup and toolchains, compiling everything will look like it:
+./openssl-build /opt/android-ndk ../openssl-1.0.1i 21 armeabi 4.9 /Path/To/Output/armeabi
+./openssl-build /opt/android-ndk ../openssl-1.0.1i 21 armeabi-v7a 4.9 /Path/To/Output/armeabi-v7a
+./openssl-build /opt/android-ndk ../openssl-1.0.1i 21 arm64-v8a 4.9 /Path/To/Output/arm64-v8a
+./openssl-build /opt/android-ndk ../openssl-1.0.1i 21 x86 4.9 /Path/To/Output/x86
+./openssl-build /opt/android-ndk ../openssl-1.0.1i 21 x86_64 4.9 /Path/To/Output/x86_64

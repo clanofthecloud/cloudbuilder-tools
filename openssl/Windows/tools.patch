@@ -1,0 +1,38 @@
+--- util/pl/VC-32.pl	Wed Aug  6 23:10:56 2014
++++ util/pl/VC-32.pl	Thu Sep 18 11:40:24 2014
+@@ -49,7 +49,7 @@
+     $lib_cflag='/Zl' if (!$shlib);	# remove /DEFAULTLIBs from static lib
+     $opt_cflags=$f.' /Ox';
+     $dbg_cflags=$f.'d /Od -DDEBUG -D_DEBUG';
+-    $lflags="/nologo /subsystem:console /opt:ref";
++    $lflags="/nologo /subsystem:console /opt:ref /safeseh";
+ 
+     *::perlasm_compile_target = sub {
+ 	my ($target,$source,$bname)=@_;
+@@ -121,7 +121,7 @@
+     $base_cflags.=' -I$(PORTSDK_LIBPATH)/../../include'	if (defined($ENV{'PORTSDK_LIBPATH'}));
+     $opt_cflags=' /MC /O1i';	# optimize for space, but with intrinsics...
+     $dbg_cflags=' /MC /Od -DDEBUG -D_DEBUG';
+-    $lflags="/nologo /opt:ref $wcelflag";
++    $lflags="/nologo /opt:ref /safeseh $wcelflag";
+     }
+ else	# Win32
+     {
+@@ -131,7 +131,7 @@
+     $ff = "/fixed";
+     $opt_cflags=$f.' /Ox /O2 /Ob2';
+     $dbg_cflags=$f.'d /Od -DDEBUG -D_DEBUG';
+-    $lflags="/nologo /subsystem:console /opt:ref";
++    $lflags="/nologo /subsystem:console /opt:ref /safeseh";
+     }
+ $mlflags='';
+ 
+@@ -212,7 +212,7 @@
+ 	$asmtype="win32n";
+ 	$afile='-o ';
+ } else {
+-	$asm='ml /nologo /Cp /coff /c /Cx /Zi';
++	$asm='ml /nologo /safeseh /Cp /coff /c /Cx /Zi';
+ 	$afile='/Fo';
+ 	$asmtype="win32";
+ }

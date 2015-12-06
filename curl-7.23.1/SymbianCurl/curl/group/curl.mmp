@@ -1,0 +1,101 @@
+/*
+============================================================================
+ Name		: curl.mmp
+ Author	  : 
+ Copyright   : Your copyright notice
+ Description : This is the project specification file for curl.
+============================================================================
+*/
+
+//	Ideally this should be a DLL, but because Symbian SKDs are such crap
+//	at dealing with DLLs, we simplify and generate a static lib right now.
+TARGET			curl.lib
+TARGETTYPE		lib
+UID				0
+
+MACRO	CURL_STATICLIB
+
+//TARGET		curl.dll
+//TARGETTYPE	dll
+//UID 0x1000008d 0xe3cfcb9d
+
+//DEBUGGABLE_UDEBONLY
+//CAPABILITY NetworkServices
+//EPOCALLOWDLLDATA
+
+MACRO	BUILDING_LIBCURL
+MACRO	HTTP_ONLY
+MACRO	CURL_DISABLE_RTSP
+MACRO	CURL_DISABLE_GOPHER
+MACRO	CURL_DISABLE_POP3
+MACRO	CURL_DISABLE_DICT
+MACRO	CURL_DISABLE_FILE
+MACRO	CURL_DISABLE_FTP
+MACRO	CURL_DISABLE_IMAP
+MACRO	CURL_DISABLE_LDAP
+MACRO	CURL_DISABLE_SMTP
+MACRO	CURL_DISABLE_TELNET
+MACRO	CURL_DISABLE_TFTP
+MACRO	USE_CYASSL
+
+USERINCLUDE		..\..\..
+USERINCLUDE		..\..\..\include
+USERINCLUDE		..\..\..\cyassl
+
+SYSTEMINCLUDE	\epoc32\include
+SYSTEMINCLUDE	\epoc32\include\stdapis
+
+SOURCEPATH	..\..\..\lib
+SOURCE		asyn-thread.c
+SOURCE		base64.c
+SOURCE		connect.c
+SOURCE		cookie.c
+SOURCE		curl_addrinfo.c
+SOURCE		curl_memrchr.c
+SOURCE		curl_rand.c
+SOURCE		curl_threads.c
+SOURCE		cyassl.c
+SOURCE		easy.c escape.c
+SOURCE		fileinfo.c
+SOURCE		formdata.c
+SOURCE		getenv.c
+SOURCE		getinfo.c
+SOURCE		hash.c
+SOURCE		hostasyn.c
+SOURCE		hostip.c
+SOURCE		hostip4.c
+SOURCE		http.c
+SOURCE		http_chunks.c
+SOURCE		http_digest.c
+SOURCE		http_proxy.c
+SOURCE		if2ip.c
+SOURCE		inet_ntop.c
+SOURCE		inet_pton.c
+SOURCE		llist.c
+SOURCE		md5.c
+SOURCE		mprintf.c
+SOURCE		multi.c
+SOURCE		netrc.c
+SOURCE		nonblock.c
+SOURCE		parsedate.c
+SOURCE		progress.c
+SOURCE		rawstr.c
+SOURCE		select.c
+SOURCE		sendf.c
+SOURCE		share.c
+SOURCE		slist.c
+SOURCE		socks.c
+SOURCE		speedcheck.c
+SOURCE		splay.c
+SOURCE		sslgen.c
+SOURCE		ssluse.c
+SOURCE		strequal.c
+SOURCE		strerror.c
+SOURCE		strtok.c
+SOURCE		timeval.c
+SOURCE		transfer.c
+SOURCE		url.c
+SOURCE		warnless.c
+SOURCE		wildcard.c
+
+//LIBRARY libc.lib libpthread.lib

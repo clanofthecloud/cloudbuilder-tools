@@ -1,0 +1,21 @@
+Rebuilding selected file(s)
+
+**** Internal Builder is used for build               ****
+arm-samsung-nucleuseabi-gcc -DSHP -D_DEBUG -IC:/bada/2.0.4/Include -IC:/Dev/Work/curl-7.23.1/include -O0 -g -Wall -c -funsigned-char -fshort-wchar -fpic -march=armv7-a -mthumb -mthumb-interwork -mfpu=vfpv3 -mfloat-abi=hard -obase64.o ..\..\..\lib\base64.c
+In file included from ..\..\..\lib\/setup.h:121:0,
+                 from ..\..\..\lib\base64.c:25:
+C:/Dev/Work/curl-7.23.1/include/curl/curlbuild.h:587:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'curl_socklen_t'
+In file included from ..\..\..\lib\/setup.h:127:0,
+                 from ..\..\..\lib\base64.c:25:
+C:/Dev/Work/curl-7.23.1/include/curl/curlrules.h:173:6: error: 'curl_socklen_t' undeclared here (not in a function)
+In file included from ..\..\..\lib\/setup.h:605:0,
+                 from ..\..\..\lib\base64.c:25:
+..\..\..\lib\/setup_once.h:157:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Missing_definition_of_macro_sread'
+..\..\..\lib\/setup_once.h:279:5: warning: data definition has no type or storage class
+..\..\..\lib\/setup_once.h:279:5: warning: type defaults to 'int' in declaration of 'bool'
+In file included from C:/Dev/Work/curl-7.23.1/include/curl/mprintf.h:28:0,
+                 from ..\..\..\lib\base64.c:28:
+C:/Dev/Work/curl-7.23.1/include/curl/curl.h:78:24: fatal error: sys/socket.h: No such file or directory
+compilation terminated.
+
+Build failed: Internal builder error occurred
