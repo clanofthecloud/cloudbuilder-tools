@@ -1,0 +1,4 @@
+**/*.opensdf
+**/*.sdf
+openssl/openssl-*.tar.gz
+

@@ -254,7 +254,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -286,10 +286,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2012|Win32'">
@@ -327,7 +331,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -359,10 +363,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2010|Win32'">
@@ -398,7 +406,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -429,10 +437,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_VS2012|Win32'">
@@ -469,7 +481,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -500,10 +512,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Debug|Win32'">
@@ -556,7 +572,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -602,10 +618,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL Release|Win32'">
@@ -655,7 +675,7 @@ mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -699,10 +719,14 @@ xcopy /s /e ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
     <PostBuildEvent>
       <Command>mkdir ..\..\..\cloudbuilder\delivery\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers
+mkdir ..\..\..\cloudbuilder\delivery\curl\Headers\curl
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
 copy $(TargetDir)\libcurl*.lib ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\curl\Windows\$(Configuration)\$(PlatformShortName)
+xcopy /s /e /y ..\include\curl ..\..\..\cloudbuilder\delivery\curl\Headers\curl
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
