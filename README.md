@@ -59,7 +59,7 @@ Then simply open a Terminal, move to the folder (`openssl/Mac+iOS`) and run `./o
 
 ## Compiling CURL
 
-On Windows: open `curl-7.23.1\vc6curl.sln`. We currently use Visual Studio 2012. An upgrade may be suggested with later versions. By modifying the target SDK, you may compile it on Visual Studio 2010 too, but it has not been tested on previous versions.
+**On Windows**: open `curl-7.23.1\vc6curl.sln`. We currently use Visual Studio 2012. An upgrade may be suggested with later versions. By modifying the target SDK, you may compile it on Visual Studio 2010 too, but it has not been tested on previous versions.
 
 You can play with the Configuration Manager and compile it for your needs. Use the following configurations:
 
@@ -67,3 +67,22 @@ You can play with the Configuration Manager and compile it for your needs. Use t
 	- LIB_Release_VS2012 with platform Win32 and x64
 
 Which means 4 configurations, therefore running the compilation 4 times.
+
+**On Mac**: open `curl-7.23.1\MacosXCurl\MacosXCurl.xcodeproj` with Xcode (you need Mac OS X). Here, just like on Windows, you should run all the 4 possible configurations one by one: MacosXCurl-Debug and MacosXCurl-Release, on both My Mac (32-bit) and My Mac (64-bit). Note that you need OpenSSL to be compiled successfully prior to this step, else you'll get errors about missing .h files.
+
+**On iOS**: open `curl-7.23.1\iOSCurl\iOSCurl.xcodeproj` with Xcode (you need Mac OS X). Here, just like on Mac OS X, you should run all the 4 possible configurations one by one:
+
+	* For iOSCurl-Debug and iOSCurl-Release,
+	* Once with With any iPhone Simulator (e.g. iPhone 6S) and once with *Generic iOS Device*.
+
+Note that you need OpenSSL to be compiled successfully prior to this step, else you'll get errors about missing .h files.
+
+**On Android**: open a console in the directory `curl-7.23.1\AndroidCurl\jni`. On Windows, you need a cygwin console (unless you replicate what the `Build.sh` script does by hand). Run the `Build.sh` script, which will compile the library successively for all CPU architectures (known to be running Android to date). If you get errors like this:
+
+```$ ./Build.sh
+./Build.sh: line 2: $'\r': command not found
+./Build.sh: line 3: $'ndk-build\r': command not found```
+
+It may be that the line endings from the git repository do not match what is expected by the shell. You may just open the `Build.sh` file and re-save it with Unix Line Endings. Any powerful text editor for programmers is able to do that (on SublimeText, open the file, click on View, Line Endings, Unix and save the file).
+
+If you get an error regarding `ndk-build` being not found, you need to check that your Android SDK installation is [configured properly for command line invocation](http://developer.android.com/ndk/guides/ndk-build.html).
