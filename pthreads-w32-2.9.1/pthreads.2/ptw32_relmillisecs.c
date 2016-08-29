@@ -45,7 +45,7 @@
 INLINE 
 #endif /* PTW32_BUILD_INLINED */
 DWORD
-ptw32_relmillisecs (const struct timespec * abstime)
+ptw32_relmillisecs (const struct timespec_pthread * abstime)
 {
   const int64_t NANOSEC_PER_MILLISEC = 1000000;
   const int64_t MILLISEC_PER_SEC = 1000;
@@ -53,7 +53,7 @@ ptw32_relmillisecs (const struct timespec * abstime)
   int64_t tmpAbsMilliseconds;
   int64_t tmpCurrMilliseconds;
 #if defined(NEED_FTIME)
-  struct timespec currSysTime;
+  struct timespec_pthread currSysTime;
   FILETIME ft;
   SYSTEMTIME st;
 #else /* ! NEED_FTIME */

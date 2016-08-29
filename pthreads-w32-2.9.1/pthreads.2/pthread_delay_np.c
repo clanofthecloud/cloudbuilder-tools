@@ -52,7 +52,7 @@
  *       allowed and can be used to force the thread to give up the processor or to
  *       deliver a pending cancelation request. 
  *
- *       The timespec structure contains the following two fields: 
+ *       The timespec_pthread structure contains the following two fields: 
  *
  *            tv_sec is an integer number of seconds. 
  *            tv_nsec is an integer number of nanoseconds. 
@@ -71,7 +71,7 @@
  *
  * The following code segment would wait for 5 and 1/2 seconds
  *
- *  struct timespec tsWait;
+ *  struct timespec_pthread tsWait;
  *  int      intRC;
  *
  *  tsWait.tv_sec  = 5;
@@ -79,7 +79,7 @@
  *  intRC = pthread_delay_np(&tsWait);
  */
 int
-pthread_delay_np (struct timespec *interval)
+pthread_delay_np (struct timespec_pthread *interval)
 {
   DWORD wait_time;
   DWORD secs_in_millisecs;

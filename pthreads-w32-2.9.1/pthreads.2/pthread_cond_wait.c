@@ -352,7 +352,7 @@ ptw32_cond_wait_cleanup (void *args)
 
 static INLINE int
 ptw32_cond_timedwait (pthread_cond_t * cond,
-		      pthread_mutex_t * mutex, const struct timespec *abstime)
+		      pthread_mutex_t * mutex, const struct timespec_pthread *abstime)
 {
   int result = 0;
   pthread_cond_t cv;
@@ -511,7 +511,7 @@ pthread_cond_wait (pthread_cond_t * cond, pthread_mutex_t * mutex)
 int
 pthread_cond_timedwait (pthread_cond_t * cond,
 			pthread_mutex_t * mutex,
-			const struct timespec *abstime)
+			const struct timespec_pthread *abstime)
      /*
       * ------------------------------------------------------
       * DOCPUBLIC
@@ -527,7 +527,7 @@ pthread_cond_timedwait (pthread_cond_t * cond,
       *              pointer to an instance of pthread_mutex_t
       *
       *      abstime
-      *              pointer to an instance of (const struct timespec)
+      *              pointer to an instance of (const struct timespec_pthread)
       *
       *
       * DESCRIPTION

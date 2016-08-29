@@ -48,10 +48,10 @@
 	  ( ((int64_t) 27111902 << 32) + (int64_t) 3577643008 )
 
 INLINE void
-ptw32_timespec_to_filetime (const struct timespec *ts, FILETIME * ft)
+ptw32_timespec_to_filetime (const struct timespec_pthread *ts, FILETIME * ft)
      /*
       * -------------------------------------------------------------------
-      * converts struct timespec
+      * converts struct timespec_pthread
       * where the time is expressed in seconds and nanoseconds from Jan 1, 1970.
       * into FILETIME (as set by GetSystemTimeAsFileTime), where the time is
       * expressed in 100 nanoseconds from Jan 1, 1601,
@@ -63,12 +63,12 @@ ptw32_timespec_to_filetime (const struct timespec *ts, FILETIME * ft)
 }
 
 INLINE void
-ptw32_filetime_to_timespec (const FILETIME * ft, struct timespec *ts)
+ptw32_filetime_to_timespec (const FILETIME * ft, struct timespec_pthread *ts)
      /*
       * -------------------------------------------------------------------
       * converts FILETIME (as set by GetSystemTimeAsFileTime), where the time is
       * expressed in 100 nanoseconds from Jan 1, 1601,
-      * into struct timespec
+      * into struct timespec_pthread
       * where the time is expressed in seconds and nanoseconds from Jan 1, 1970.
       * -------------------------------------------------------------------
       */
