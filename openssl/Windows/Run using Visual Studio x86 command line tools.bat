@@ -22,7 +22,6 @@ patch -p0 < ../Windows/tools.patch
 )
 
 perl Configure VC-WIN32 --prefix=Build-Win32
-::call ms\do_ms
 call ms\do_nasm.bat
 
 :skipConfigure
