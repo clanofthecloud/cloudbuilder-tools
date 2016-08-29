@@ -41,7 +41,7 @@
 
 int
 pthread_rwlock_timedrdlock (pthread_rwlock_t * rwlock,
-			    const struct timespec_pthread *abstime)
+			    const struct timespec *abstime)
 {
   int result;
   pthread_rwlock_t rwl;

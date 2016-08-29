@@ -39,7 +39,7 @@
 
 
 static INLINE int
-ptw32_timed_eventwait (HANDLE event, const struct timespec_pthread *abstime)
+ptw32_timed_eventwait (HANDLE event, const struct timespec *abstime)
      /*
       * ------------------------------------------------------
       * DESCRIPTION
@@ -107,7 +107,7 @@ ptw32_timed_eventwait (HANDLE event, const struct timespec_pthread *abstime)
 
 int
 pthread_mutex_timedlock (pthread_mutex_t * mutex,
-			 const struct timespec_pthread *abstime)
+			 const struct timespec *abstime)
 {
   pthread_mutex_t mx;
   int kind;

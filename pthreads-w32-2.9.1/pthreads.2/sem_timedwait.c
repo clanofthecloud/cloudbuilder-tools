@@ -95,7 +95,7 @@ ptw32_sem_timedwait_cleanup (void * args)
 
 
 int
-sem_timedwait (sem_t * sem, const struct timespec_pthread *abstime)
+sem_timedwait (sem_t * sem, const struct timespec *abstime)
      /*
       * ------------------------------------------------------
       * DOCPUBLIC
@@ -107,7 +107,7 @@ sem_timedwait (sem_t * sem, const struct timespec_pthread *abstime)
       *              pointer to an instance of sem_t
       *
       *      abstime
-      *              pointer to an instance of struct timespec_pthread
+      *              pointer to an instance of struct timespec
       *
       * DESCRIPTION
       *      This function waits on a semaphore. If the
