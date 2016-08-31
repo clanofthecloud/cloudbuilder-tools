@@ -1,6 +1,9 @@
 # CloudBuilder-tools
 Tools for the native C++ SDK of Clan of the Cloud
 
+# Notes for Windows compilation
+A bug in the Visual Studio 2015 project updater broke all configurations for Visual Studio 2012 toolchain support. Right now, only Visual Studio 2015 toolchain is supported for pthreads and curllib (and Cloudbuilder too, in its own repository). Since OpenSSL on Windows is compiled through batches run from the Command Prompt, this project does not have the problem, and it has been successfully compiled with both Visual Studio 2012 and 2015 toolchains. We'll regenerate valid projects for Visual Studio 2012 toolchain in a next version.
+
 # Compiling
 
 This project contains external tools used to build the CloudBuilder SDK. You need to read information about the main project by refering to the [main page](https://github.com/clanofthecloud/cloudbuilder) first. Then read further if you want to recompile the tools by yourselves, which is **not required in order to use the SDK** since we provide precompiled binaries.
@@ -9,9 +12,9 @@ As described previously, check out the `cloudbuilder-tools` repository next to t
 
 The tools currently contain three projects:
 
-	- pthreads (Windows only)
-	- openssl
-	- curl
+- pthreads (Windows only)
+- openssl
+- curl
 
 These libraries are used by the main SDK and are expected to be placed in the `cloudbuilder/delivery` folder (`cloudbuilder/delivery/curl`, etc.). The Facebook and Google folders under `cloudbuilder/delivery` there need to be taken from the precompiled distribution, but you may replace them with a newer version of these SDK (though we do not recommend that).
 
@@ -21,21 +24,21 @@ We suggest that you follow this order when compiling.
 
 This step is only required on Windows, since pthreads is a standard library shipped with most UNIX-like distributions. Open `pthreads-w32-2.9.1\pthreads.2\pthread.sln` in Visual Studio 2015. Same as with curl, you need to compile it four times by selecting an alternate configuration from the Configuration Manager each time. Use the following configurations:
 
-	- Debug_VS2015 with platform Win32 and x64
-	- Release_VS2015 with platform Win32 and x64
+- Debug_VS2015 with platform Win32 and x64
+- Release_VS2015 with platform Win32 and x64
 
 Which means 4 configurations, therefore running the compilation 4 times. After that, the `cloudbuilder\delivery\pthread` directory should look as follows:
 
-	- Headers: containing a few header files
-	- Windows
-		- Debug_VS2015
-			- x86
-				- libpthread.lib
-				- vc140.pdb
-			- x64
-				- Same as in x86
-		- Release_VS2015
-			- Same structure as in Debug_VS2015
+- Headers: containing a few header files
+- Windows
+- Debug_VS2015
+- x86
+- libpthread.lib
+- vc140.pdb
+- x64
+- Same as in x86
+- Release_VS2015
+- Same structure as in Debug_VS2015
 
 ## Compiling OpenSSL
 
@@ -65,8 +68,8 @@ Then simply open a Terminal, move to the folder (`openssl/Mac+iOS`) and run `./o
 
 You can play with the Configuration Manager and compile it for your needs. Use the following configurations:
 
-	- Debug_VS2015 with platform Win32 and x64
-	- Release_VS2015 with platform Win32 and x64
+- Debug_VS2015 with platform Win32 and x64
+- Release_VS2015 with platform Win32 and x64
 
 Which means 4 configurations, therefore running the compilation 4 times.
 
@@ -74,8 +77,8 @@ Which means 4 configurations, therefore running the compilation 4 times.
 
 **On iOS**: open `curl-7.23.1\iOSCurl\iOSCurl.xcodeproj` with Xcode (you need Mac OS X). Here, just like on Mac OS X, you should run all the 4 possible configurations one by one:
 
-	* For iOSCurl-Debug and iOSCurl-Release,
-	* Once with With any iPhone Simulator (e.g. iPhone 6S) and once with *Generic iOS Device*.
+* For iOSCurl-Debug and iOSCurl-Release,
+* Once with With any iPhone Simulator (e.g. iPhone 6S) and once with *Generic iOS Device*.
 
 Note that you need OpenSSL to be compiled successfully prior to this step, else you'll get errors about missing .h files.
 
