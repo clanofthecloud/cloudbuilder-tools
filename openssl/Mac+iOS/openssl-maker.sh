@@ -6,7 +6,6 @@
 ##                                                                           ##
 ## This script is in the public domain.                                      ##
 ## Creator     : Laurent Etiemble                                            ##
-## URL         : https://gist.github.com/letiemble/6710405                   ##
 ##                                                                           ##
 ###############################################################################
 
@@ -14,11 +13,10 @@
 ## Parameters
 ## --------------------
 
-VERSION=1.0.1i
-OSX_SDK=10.9
+VERSION=1.0.2h
+OSX_SDK=10.11
 MIN_OSX=10.6
-IOS_SDK=7.1
-MIN_IOS=4.0
+IOS_SDK=9.3
 
 # These values are used to avoid version detection
 FAKE_NIBBLE=0x102031af
@@ -45,8 +43,7 @@ fi
 BASE_DIR=`pwd`
 BUILD_DIR="$BASE_DIR/build"
 DIST_DIR="$BASE_DIR/dist"
-FILES_DIR="$BASE_DIR/.."
-DELIVERY_DIR="$BASE_DIR/../../../cloudbuilder/delivery/openssl/"
+FILES_DIR="$BASE_DIR/files"
 
 OPENSSL_NAME="openssl-$VERSION"
 OPENSSL_FILE="$OPENSSL_NAME.tar.gz"
@@ -69,8 +66,7 @@ _configure() {
 	# Configure
 	if [ "x$DONT_CONFIGURE" == "x" ]; then
 		echo "Configuring $PLATFORM-$ARCH..."
-		cd "$SRC_DIR"
-		(CROSS_TOP="$CROSS_TOP" CROSS_SDK="$CROSS_SDK" CC="$CC" ./Configure --prefix="$DST_DIR" "$COMPILER" > "$LOG_FILE" 2>&1)
+		(cd "$SRC_DIR"; CROSS_TOP="$CROSS_TOP" CROSS_SDK="$CROSS_SDK" CC="$CC" ./Configure --prefix="$DST_DIR" -no-apps "$COMPILER" > "$LOG_FILE" 2>&1)
 	fi
 }
 
@@ -79,14 +75,6 @@ _build() {
 	if [ "x$DONT_BUILD" == "x" ]; then
 		echo "Building $PLATFORM-$ARCH..."
 		(cd "$SRC_DIR"; CROSS_TOP="$CROSS_TOP" CROSS_SDK="$CROSS_SDK" CC="$CC" make >> "$LOG_FILE" 2>&1)
-	fi
-}
-
-_install() {
-	# Perform the install
-	if [ "x$DONT_INSTALL" == "x" ]; then
-		echo "Installing $PLATFORM-$ARCH..."
-		(cd "$SRC_DIR"; make install >> "$LOG_FILE" 2>&1)
 	fi
 }
 
@@ -109,44 +97,22 @@ build_osx() {
 		CROSS_TOP="$DEVELOPER_DIR/Platforms/$PLATFORM.platform/Developer"
 		CROSS_SDK="$PLATFORM$OSX_SDK.sdk"
 		CC="$DEVELOPER_DIR/usr/bin/gcc -arch $ARCH"
-	
+
 		_unarchive
 		_configure
-		
+
 		# Patch Makefile
 		sed -ie "s/^CFLAG= -/CFLAG=  -mmacosx-version-min=$MIN_OSX -/" "$SRC_DIR/Makefile"
 		# Patch versions
-		sed -ie "s/^#define OPENSSL_VERSION_NUMBER.*$/#define OPENSSL_VERSION_NUMBER  $FAKE_NIBBLE/" "$SRC_DIR/crypto/opensslv.h"
-		sed -ie "s/^#define OPENSSL_VERSION_TEXT.*$/#define OPENSSL_VERSION_TEXT  \"$FAKE_TEXT\"/" "$SRC_DIR/crypto/opensslv.h"
+		sed -ie "s/^# define OPENSSL_VERSION_NUMBER.*$/# define OPENSSL_VERSION_NUMBER  $FAKE_NIBBLE/" "$SRC_DIR/crypto/opensslv.h"
+		sed -ie "s/^#  define OPENSSL_VERSION_TEXT.*$/#  define OPENSSL_VERSION_TEXT  \"$FAKE_TEXT\"/" "$SRC_DIR/crypto/opensslv.h"
 
 		_build
-		_install
 	done
-}
-
-distribute_osx() {
-	PLATFORM="MacOSX"
-	NAME="$PLATFORM"
-	DIR="$DELIVERY_DIR/$NAME"
-	FILES="libcrypto.a libssl.a"
-	mkdir -p "$DIR/include"
-	mkdir -p "$DIR/lib"
-
-	echo "$VERSION" > "$DIR/VERSION"
-	cp "$BUILD_DIR/MacOSX-i386/LICENSE" "$DIR"
-	cp -R "$DIST_DIR/MacOSX-i386/include/" "$DIR/include"
-	for f in $FILES; do
-		lipo -create \
-			"$DIST_DIR/MacOSX-i386/lib/$f" \
-			"$DIST_DIR/MacOSX-x86_64/lib/$f" \
-			-output "$DIR/lib/$f"
-	done
-	
-#	(cd "$DIST_DIR"; tar -cvf "../$NAME.tar.gz" "$NAME")
 }
 
 build_ios() {
-	ARCHS="i386 armv7 armv7s arm64"
+	ARCHS="i386 x86_64 armv7 armv7s arm64"
 	for ARCH in $ARCHS; do
 		PLATFORM="iPhoneOS"
 		COMPILER="iphoneos-cross"
@@ -157,51 +123,88 @@ build_ios() {
 		# Select the compiler
 		if [ "$ARCH" == "i386" ]; then
 			PLATFORM="iPhoneSimulator"
+			MIN_IOS="4.2"
+		elif [ "$ARCH" == "x86_64" ]; then
+			PLATFORM="iPhoneSimulator"
+			MIN_IOS="7.0"
 		elif [ "$ARCH" == "arm64" ]; then
 			MIN_IOS="7.0"
 		else
-			MIN_IOS="4.0"
+			MIN_IOS="6.0"
 		fi
-		
+
 		CROSS_TOP="$DEVELOPER_DIR/Platforms/$PLATFORM.platform/Developer"
 		CROSS_SDK="$PLATFORM$IOS_SDK.sdk"
-		CC="$DEVELOPER_DIR/usr/bin/gcc -arch $ARCH"
-		
+		CC="clang -arch $ARCH -fembed-bitcode"
+
 		_unarchive
 		_configure
-		
+
 		# Patch Makefile
-		sed -ie "s/^CFLAG= -/CFLAG=  -miphoneos-version-min=$MIN_IOS -/" "$SRC_DIR/Makefile"
+		if [ "$ARCH" == "x86_64" ]; then
+			sed -ie "s/^CFLAG= -/CFLAG=  -miphoneos-version-min=$MIN_IOS -DOPENSSL_NO_ASM -/" "$SRC_DIR/Makefile"
+    	else
+			sed -ie "s/^CFLAG= -/CFLAG=  -miphoneos-version-min=$MIN_IOS -/" "$SRC_DIR/Makefile"
+        fi
 		# Patch versions
-		sed -ie "s/^#define OPENSSL_VERSION_NUMBER.*$/#define OPENSSL_VERSION_NUMBER  $FAKE_NIBBLE/" "$SRC_DIR/crypto/opensslv.h"
-		sed -ie "s/^#define OPENSSL_VERSION_TEXT.*$/#define OPENSSL_VERSION_TEXT  \"$FAKE_TEXT\"/" "$SRC_DIR/crypto/opensslv.h"
-		
+		sed -ie "s/^# define OPENSSL_VERSION_NUMBER.*$/# define OPENSSL_VERSION_NUMBER  $FAKE_NIBBLE/" "$SRC_DIR/crypto/opensslv.h"
+		sed -ie "s/^#  define OPENSSL_VERSION_TEXT.*$/#  define OPENSSL_VERSION_TEXT  \"$FAKE_TEXT\"/" "$SRC_DIR/crypto/opensslv.h"
+
 		_build
-		_install
 	done
+}
+
+distribute_osx() {
+	PLATFORM="MacOSX"
+	NAME="$OPENSSL_NAME-$PLATFORM"
+	DIR="$DIST_DIR/$NAME"
+	FILES="libcrypto.a libssl.a"
+	mkdir -p "$DIR/include"
+	mkdir -p "$DIR/lib"
+
+	echo "$VERSION" > "$DIR/VERSION"
+	cp "$BUILD_DIR/MacOSX-i386/LICENSE" "$DIR"
+	cp -LR "$BUILD_DIR/MacOSX-i386/include/" "$DIR/include"
+
+	# Alter rsa.h to make Swift happy
+	sed -i .bak 's/const BIGNUM \*I/const BIGNUM *i/g' "$DIR/include/openssl/rsa.h"
+
+	for f in $FILES; do
+		lipo -create \
+			"$BUILD_DIR/MacOSX-i386/$f" \
+			"$BUILD_DIR/MacOSX-x86_64/$f" \
+			-output "$DIR/lib/$f"
+	done
+
+	(cd "$DIST_DIR"; tar -cvf "../$NAME.tar.gz" "$NAME")
 }
 
 distribute_ios() {
 	PLATFORM="iOS"
-	NAME="$PLATFORM"
-	DIR="$DELIVERY_DIR/$NAME"
+	NAME="$OPENSSL_NAME-$PLATFORM"
+	DIR="$DIST_DIR/$NAME"
 	FILES="libcrypto.a libssl.a"
 	mkdir -p "$DIR/include"
 	mkdir -p "$DIR/lib"
 
 	echo "$VERSION" > "$DIR/VERSION"
 	cp "$BUILD_DIR/iPhoneOS-i386/LICENSE" "$DIR"
-	cp -R "$DIST_DIR/iPhoneOS-i386/include/" "$DIR/include"
+	cp -LR "$BUILD_DIR/iPhoneOS-i386/include/" "$DIR/include"
+
+	# Alter rsa.h to make Swift happy
+	sed -i .bak 's/const BIGNUM \*I/const BIGNUM *i/g' "$DIR/include/openssl/rsa.h"
+
 	for f in $FILES; do
 		lipo -create \
-			"$DIST_DIR/iPhoneOS-i386/lib/$f" \
-			"$DIST_DIR/iPhoneOS-arm64/lib/$f" \
-			"$DIST_DIR/iPhoneOS-armv7/lib/$f" \
-			"$DIST_DIR/iPhoneOS-armv7s/lib/$f" \
+			"$BUILD_DIR/iPhoneOS-i386/$f" \
+			"$BUILD_DIR/iPhoneOS-x86_64/$f" \
+			"$BUILD_DIR/iPhoneOS-arm64/$f" \
+			"$BUILD_DIR/iPhoneOS-armv7/$f" \
+			"$BUILD_DIR/iPhoneOS-armv7s/$f" \
 			-output "$DIR/lib/$f"
 	done
-	
-#	(cd "$DIST_DIR"; tar -cvf "../$NAME-.tar.gz" "$NAME")
+
+	(cd "$DIST_DIR"; tar -cvf "../$NAME.tar.gz" "$NAME")
 }
 
 # Create folders
@@ -215,9 +218,7 @@ if [ ! -e "$OPENSSL_PATH" ]; then
 fi
 
 build_osx
+build_ios
+
 distribute_osx
-
-# Do not need because on iOS we use the system lib
-#build_ios
-#distribute_ios
-
+distribute_ios
