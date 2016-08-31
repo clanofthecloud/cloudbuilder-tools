@@ -60,6 +60,7 @@
 		3762A1B5155971AC00D41C0A /* url.c in Sources */ = {isa = PBXBuildFile; fileRef = 3762A152155971AC00D41C0A /* url.c */; };
 		3762A1B7155971AC00D41C0A /* warnless.c in Sources */ = {isa = PBXBuildFile; fileRef = 3762A154155971AC00D41C0A /* warnless.c */; };
 		3762A1B8155971AC00D41C0A /* wildcard.c in Sources */ = {isa = PBXBuildFile; fileRef = 3762A155155971AC00D41C0A /* wildcard.c */; };
+		C2787F391D76F826009680EA /* hostip6.c in Sources */ = {isa = PBXBuildFile; fileRef = C2787F381D76F826009680EA /* hostip6.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		3762A152155971AC00D41C0A /* url.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = url.c; path = ../lib/url.c; sourceTree = "<group>"; };
 		3762A154155971AC00D41C0A /* warnless.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = warnless.c; path = ../lib/warnless.c; sourceTree = "<group>"; };
 		3762A155155971AC00D41C0A /* wildcard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wildcard.c; path = ../lib/wildcard.c; sourceTree = "<group>"; };
+		C2787F381D76F826009680EA /* hostip6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hostip6.c; path = ../lib/hostip6.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		3762A0F21559714200D41C0A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C2787F381D76F826009680EA /* hostip6.c */,
 				172D6D1319CD786D008F3C3F /* curl_gethostname.c */,
 				172D6D0D19CD780F008F3C3F /* curl_ntlm_core.c */,
 				172D6D0E19CD780F008F3C3F /* curl_ntlm_msgs.c */,
@@ -274,7 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nmkdir -p \"$PROJECT_DIR\"/../../delivery/curl/MacOSX/$CONFIGURATION\n\ncp \"$CONFIGURATION_BUILD_DIR\"/*  \"$PROJECT_DIR\"/../../delivery/curl/MacOSX/$CONFIGURATION/\n                              \n                              \n";
+			shellScript = "\nmkdir -p \"$PROJECT_DIR\"/../../../cloudbuilder/delivery/curl/MacOSX/$CONFIGURATION\n\ncp \"$CONFIGURATION_BUILD_DIR\"/*  \"$PROJECT_DIR\"/../../../cloudbuilder/delivery/curl/MacOSX/$CONFIGURATION/\n                              \n                              \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				172D6D1219CD780F008F3C3F /* curl_ntlm.c in Sources */,
+				C2787F391D76F826009680EA /* hostip6.c in Sources */,
 				3762A156155971AC00D41C0A /* base64.c in Sources */,
 				3762A157155971AC00D41C0A /* connect.c in Sources */,
 				3762A159155971AC00D41C0A /* cookie.c in Sources */,
@@ -452,7 +456,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"../**",
+					"../../../cloudbuilder/delivery/openssl/MacOSX/include/**",
+					"../../include/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DHAVE_CONFIG_H",
+					"-DBUILDING_LIBCURL",
+					"-DCURL_STATICLIB",
+					"-DHTTP_ONLY",
+					"-DCURL_DISABLE_RTSP",
+					"-DCURL_DISABLE_GOPHER",
+					"-DCURL_DISABLE_POP3",
+					"-DCURL_DISABLE_DICT",
+					"-DCURL_DISABLE_FILE",
+					"-DCURL_DISABLE_FTP",
+					"-DCURL_DISABLE_IMAP",
+					"-DCURL_DISABLE_LDAP",
+					"-DCURL_DISABLE_SMTP",
+					"-DCURL_DISABLE_TELNET",
+					"-DCURL_DISABLE_TFTP",
+					"-DUSE_OPENSSL",
+					"-DUSE_SSLEAY",
+					"-DENABLE_IPV6",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -461,7 +491,33 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"../**",
+					"../../../cloudbuilder/delivery/openssl/MacOSX/include/**",
+					"../../include/**",
+				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DHAVE_CONFIG_H",
+					"-DBUILDING_LIBCURL",
+					"-DCURL_STATICLIB",
+					"-DHTTP_ONLY",
+					"-DCURL_DISABLE_RTSP",
+					"-DCURL_DISABLE_GOPHER",
+					"-DCURL_DISABLE_POP3",
+					"-DCURL_DISABLE_DICT",
+					"-DCURL_DISABLE_FILE",
+					"-DCURL_DISABLE_FTP",
+					"-DCURL_DISABLE_IMAP",
+					"-DCURL_DISABLE_LDAP",
+					"-DCURL_DISABLE_SMTP",
+					"-DCURL_DISABLE_TELNET",
+					"-DCURL_DISABLE_TFTP",
+					"-DUSE_OPENSSL",
+					"-DUSE_SSLEAY",
+					"-DENABLE_IPV6",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -61,6 +61,7 @@
 		3710A28614E5117D0064946F /* url.c in Sources */ = {isa = PBXBuildFile; fileRef = 3710A25414E5117C0064946F /* url.c */; };
 		3710A28714E5117D0064946F /* warnless.c in Sources */ = {isa = PBXBuildFile; fileRef = 3710A25514E5117C0064946F /* warnless.c */; };
 		3710A28814E5117D0064946F /* wildcard.c in Sources */ = {isa = PBXBuildFile; fileRef = 3710A25614E5117C0064946F /* wildcard.c */; };
+		C2787F371D76CE3C009680EA /* hostip6.c in Sources */ = {isa = PBXBuildFile; fileRef = C2787F361D76CE3C009680EA /* hostip6.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		3710A25414E5117C0064946F /* url.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = url.c; path = ../../lib/url.c; sourceTree = "<group>"; };
 		3710A25514E5117C0064946F /* warnless.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = warnless.c; path = ../../lib/warnless.c; sourceTree = "<group>"; };
 		3710A25614E5117C0064946F /* wildcard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wildcard.c; path = ../../lib/wildcard.c; sourceTree = "<group>"; };
+		C2787F361D76CE3C009680EA /* hostip6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hostip6.c; path = ../../lib/hostip6.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				3710A23314E5117C0064946F /* hostasyn.c */,
 				3710A23414E5117C0064946F /* hostip.c */,
 				3710A23514E5117C0064946F /* hostip4.c */,
+				C2787F361D76CE3C009680EA /* hostip6.c */,
 				3710A23614E5117C0064946F /* http_chunks.c */,
 				3710A23714E5117C0064946F /* http_digest.c */,
 				3710A23814E5117C0064946F /* http_proxy.c */,
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3710A25714E5117C0064946F /* base64.c in Sources */,
+				C2787F371D76CE3C009680EA /* hostip6.c in Sources */,
 				3710A25814E5117C0064946F /* connect.c in Sources */,
 				3710A25914E5117C0064946F /* cookie.c in Sources */,
 				3710A25A14E5117D0064946F /* curl_addrinfo.c in Sources */,
@@ -411,6 +415,26 @@
 				GCC_PREFIX_HEADER = "iOSCurl/iOSCurl-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DHAVE_CONFIG_H",
+					"-DBUILDING_LIBCURL",
+					"-DCURL_STATICLIB",
+					"-DHTTP_ONLY",
+					"-DCURL_DISABLE_RTSP",
+					"-DCURL_DISABLE_GOPHER",
+					"-DCURL_DISABLE_POP3",
+					"-DCURL_DISABLE_DICT",
+					"-DCURL_DISABLE_FILE",
+					"-DCURL_DISABLE_FTP",
+					"-DCURL_DISABLE_IMAP",
+					"-DCURL_DISABLE_LDAP",
+					"-DCURL_DISABLE_SMTP",
+					"-DCURL_DISABLE_TELNET",
+					"-DCURL_DISABLE_TFTP",
+					"-DUSE_OPENSSL",
+					"-DUSE_SSLEAY",
+					"-DENABLE_IPV6",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -466,6 +490,26 @@
 				GCC_PREFIX_HEADER = "iOSCurl/iOSCurl-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DHAVE_CONFIG_H",
+					"-DBUILDING_LIBCURL",
+					"-DCURL_STATICLIB",
+					"-DHTTP_ONLY",
+					"-DCURL_DISABLE_RTSP",
+					"-DCURL_DISABLE_GOPHER",
+					"-DCURL_DISABLE_POP3",
+					"-DCURL_DISABLE_DICT",
+					"-DCURL_DISABLE_FILE",
+					"-DCURL_DISABLE_FTP",
+					"-DCURL_DISABLE_IMAP",
+					"-DCURL_DISABLE_LDAP",
+					"-DCURL_DISABLE_SMTP",
+					"-DCURL_DISABLE_TELNET",
+					"-DCURL_DISABLE_TFTP",
+					"-DUSE_OPENSSL",
+					"-DUSE_SSLEAY",
+					"-DENABLE_IPV6",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
