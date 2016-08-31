@@ -7,7 +7,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES :=	$(CURL_SRC_DIR)/base64.c $(CURL_SRC_DIR)/connect.c $(CURL_SRC_DIR)/cookie.c $(CURL_SRC_DIR)/curl_addrinfo.c $(CURL_SRC_DIR)/curl_memrchr.c $(CURL_SRC_DIR)/curl_rand.c		\
 					$(CURL_SRC_DIR)/easy.c $(CURL_SRC_DIR)/escape.c $(CURL_SRC_DIR)/fileinfo.c $(CURL_SRC_DIR)/formdata.c $(CURL_SRC_DIR)/getenv.c $(CURL_SRC_DIR)/getinfo.c $(CURL_SRC_DIR)/hash.c		\
-					$(CURL_SRC_DIR)/hostasyn.c $(CURL_SRC_DIR)/hostip.c $(CURL_SRC_DIR)/hostip4.c $(CURL_SRC_DIR)/http.c $(CURL_SRC_DIR)/http_chunks.c	$(CURL_SRC_DIR)/http_digest.c				\
+					$(CURL_SRC_DIR)/hostasyn.c $(CURL_SRC_DIR)/hostip.c $(CURL_SRC_DIR)/hostip4.c $(CURL_SRC_DIR)/hostip6.c $(CURL_SRC_DIR)/http.c $(CURL_SRC_DIR)/http_chunks.c	$(CURL_SRC_DIR)/http_digest.c   \
 					$(CURL_SRC_DIR)/http_proxy.c $(CURL_SRC_DIR)/if2ip.c $(CURL_SRC_DIR)/inet_ntop.c $(CURL_SRC_DIR)/inet_pton.c $(CURL_SRC_DIR)/llist.c $(CURL_SRC_DIR)/md5.c $(CURL_SRC_DIR)/mprintf.c	\
 					$(CURL_SRC_DIR)/multi.c $(CURL_SRC_DIR)/netrc.c $(CURL_SRC_DIR)/nonblock.c $(CURL_SRC_DIR)/parsedate.c $(CURL_SRC_DIR)/progress.c $(CURL_SRC_DIR)/rawstr.c $(CURL_SRC_DIR)/select.c	\
 					$(CURL_SRC_DIR)/sendf.c $(CURL_SRC_DIR)/share.c $(CURL_SRC_DIR)/slist.c $(CURL_SRC_DIR)/socks.c $(CURL_SRC_DIR)/speedcheck.c $(CURL_SRC_DIR)/splay.c $(CURL_SRC_DIR)/sslgen.c		\
@@ -30,7 +30,8 @@ LOCAL_CFLAGS	:=	-DHAVE_CONFIG_H			\
 					-DCURL_DISABLE_SMTP		\
 					-DCURL_DISABLE_TELNET	\
 					-DCURL_DISABLE_TFTP		\
-					-DUSE_OPENSSL			\
+                    -DENABLE_IPV6           \
+                    -DUSE_OPENSSL			\
 					-DUSE_SSLEAY
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../..
