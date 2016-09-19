@@ -31,14 +31,14 @@ Which means 4 configurations, therefore running the compilation 4 times. After t
 
 - Headers: containing a few header files
 - Windows
-- Debug_VS2015
-- x86
-- libpthread.lib
-- vc140.pdb
-- x64
-- Same as in x86
-- Release_VS2015
-- Same structure as in Debug_VS2015
+    - Debug_VS2015
+        - x86
+            - libpthread.lib
+            - vc140.pdb
+        - x64
+            - Same as in x86
+    - Release_VS2015
+        - Same structure as in Debug_VS2015
 
 ## Compiling OpenSSL
 
