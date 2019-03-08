@@ -522,8 +522,11 @@ copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Confi
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)
 mkdir ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+mkdir ..\..\..\cloudbuilder\delivery\pthread\Headers
 copy $(TargetDir)\libpthread*.lib ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
-copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)</Command>
+copy $(TargetDir)\vc*.pdb ..\..\..\cloudbuilder\delivery\pthread\Windows\$(Configuration)\$(PlatformShortName)
+copy $(ProjectDir)\pthread.h ..\..\..\cloudbuilder\delivery\pthread\Headers\
+copy $(ProjectDir)\sched.h ..\..\..\cloudbuilder\delivery\pthread\Headers\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_VS2015|x64'">
